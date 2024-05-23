@@ -24,7 +24,7 @@
     git config --global user.email "your.email@example.com"
     ```
 
-## Basic Operations
+## Basic Commands
 - **ls**
   - Description: List directory contents.
   - Example:
@@ -44,6 +44,13 @@
   - Example:
     ```bash
     git init
+    ```
+
+- **git clone**
+  - Description: Clone a repository into a new directory.
+  - Example:
+    ```bash
+    git clone https://github.com/user/repo.git
     ```
 
 - **git add filename**
@@ -88,6 +95,20 @@
     git log
     ```
 
+- **git diff**
+  - Description: Show changes between commits, commit and working tree, etc.
+  - Example:
+    ```bash
+    git diff
+    ```
+
+- **git show**
+  - Description: Show various types of objects (commits, tags, etc).
+  - Example:
+    ```bash
+    git show commitId
+    ```
+
 ## Branching and Merging
 - **git checkout -b "branchName"**
   - Description: Create a new branch and switch to it.
@@ -108,6 +129,20 @@
   - Example:
     ```bash
     git checkout main
+    ```
+
+- **git merge "branchName"**
+  - Description: Merge the specified branch into the current branch.
+  - Example:
+    ```bash
+    git merge feature-branch
+    ```
+
+- **git branch -d "branchName"**
+  - Description: Delete the specified branch.
+  - Example:
+    ```bash
+    git branch -d feature-branch
     ```
 
 ## Advanced Commands
@@ -216,7 +251,7 @@
     git reflog HEAD@{1}
     ```
 
-- **git cherry-pick**
+- **git cherry-pick commitId**
   - Description: Apply changes from a specific commit.
   - Example:
     ```bash
@@ -313,3 +348,86 @@
     ```bash
     git rebase main master
     ```
+
+## Additional Commands
+- **git tag**
+  - Description: List, create, or delete tags.
+  - Example:
+    ```bash
+    git tag
+    git tag -a v1.0 -m "Version 1.0"
+    ```
+
+- **git bisect**
+  - Description: Use binary search to find the commit that introduced a bug.
+  - Example:
+    ```bash
+    git bisect start
+    git bisect bad
+    git bisect good commitId
+    ```
+
+- **git clean**
+  - Description: Remove untracked files from the working directory.
+  - Example:
+    ```bash
+    git clean -f
+    ```
+
+- **git archive**
+  - Description: Create an archive of files from a named tree.
+  - Example:
+    ```bash
+    git archive -o archive.zip HEAD
+    ```
+
+- **git blame**
+  - Description: Show what revision and author last modified each line of a file.
+  - Example:
+    ```bash
+    git blame filename
+    ```
+
+- **git grep**
+  - Description: Print lines matching a pattern.
+  - Example:
+    ```bash
+    git grep "TODO"
+    ```
+
+- **git shortlog**
+  - Description: Summarize git log output.
+  - Example:
+    ```bash
+    git shortlog
+    ```
+
+- **git describe**
+  - Description: Give an object a human-readable name based on an available ref.
+  - Example:
+    ```bash
+    git describe --tags
+    ```
+
+- **git rm**
+  - Description: Remove files from the working tree and from the index.
+  - Example:
+    ```bash
+    git rm filename
+    ```
+
+- **git mv**
+  - Description: Move or rename a file, a directory, or a symlink.
+  - Example:
+    ```bash
+    git mv oldFilename newFilename
+    ```
+
+- **git diff --staged**
+  - Description: Show changes between the index and the last commit.
+  - Example:
+    ```bash
+    git diff --staged
+    ```
+
+This `README.md` file now includes a comprehensive list of both basic and advanced Git commands, with descriptions and examples. Ensure you review and adjust any descriptions or examples as needed to match the specifics of your course or personal preferences.
